@@ -28,3 +28,5 @@ Colorizer is a MIDI-controlled polyphonic resonator. The algorithm adjusts the d
 ## Notes
 
 The JUCE project was created using Juce version 6.0.8, and was compiled using c++14 and Visual Studio 2019.
+
+This product was developed by Christian Calderoni at the Laboratorio di Informatica Musicale of the Università degli Studi di Milano as part of a BSc thesis project. It has no commercial or marketing goals. Therefore, the developer shall not be held liable for any potential issues, including data loss, damages of any kind, or other inconveniences resulting from defects in the product.
