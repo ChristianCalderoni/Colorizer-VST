@@ -1,0 +1,288 @@
+#N canvas 1358 -8 1920 1002 12;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array ch1 332042 float 2 black black;
+#X coords 0 1 332042 -1 200 140 1;
+#X restore 4 64 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array ch2 332042 float 2 black black;
+#X coords 0 1 332042 -1 200 140 1;
+#X restore 225 64 graph;
+#X obj 6 36 soundfiler;
+#X obj 803 1245 dac~;
+#X obj 803 585 tabplay~ ch1;
+#X obj 906 585 tabplay~ ch2;
+#X msg 906 524 stop;
+#X text 1051 525 Loop on/off;
+#X obj 821 725 line~;
+#X floatatom 821 671 5 0 1 0 - - - 0 0, f 5;
+#X obj 803 485 receive loopBang;
+#X obj 987 610 spigot;
+#X obj 1026 526 tgl 19 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 987 635 send loopBang;
+#X obj 803 524 bng 20 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1183 485 notein;
+#X obj 1506 1185 line~;
+#X obj 973 171 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 #ff8000
+#000000 #000000 3810 1 0;
+#X obj 1019 171 vsl 15 128 0 1000 0 0 empty empty empty 0 -9 0 10 #ff8000
+#000000 #000000 6350 1 0;
+#X obj 1065 171 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #ff8000
+#000000 #000000 12700 1 0;
+#X obj 1111 171 vsl 15 128 0 2000 0 0 empty empty empty 0 -9 0 10 #ff8000
+#000000 #000000 6350 1 0;
+#X obj 1019 344 t b f;
+#X obj 1065 345 t b f;
+#X obj 1111 345 t b f;
+#X text 1108 85 R;
+#X text 1062 85 S;
+#X text 1016 85 D;
+#X text 972 85 A;
+#X obj 1405 775 receive env;
+#X obj 1006 404 send env;
+#X obj 1405 829 receive env;
+#X obj 1405 884 receive env;
+#X obj 1405 937 receive env;
+#X floatatom 1019 316 5 0 0 0 - - - 0 0, f 5;
+#X floatatom 1065 316 5 0 0 0 - - - 0 0, f 5;
+#X floatatom 1111 316 5 0 0 0 - - - 0 0, f 5;
+#X floatatom 973 316 5 0 0 0 - - - 0 0, f 5;
+#X obj 821 698 pack f 10;
+#X obj 1506 1156 pack f 10;
+#X obj 1006 376 pack f f f f, f 20;
+#X obj 1183 554 pack f f f;
+#X obj 1305 205 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff8000
+#000000 #000000 8890 1 0;
+#X obj 1183 524 poly 8 1;
+#X obj 1183 584 route 1 2 3 4 5 6 7 8, f 25;
+#X obj 1405 988 receive env;
+#X obj 1405 1039 receive env;
+#X obj 1406 1092 receive env;
+#X obj 1405 1144 receive env;
+#X obj 803 755 *~;
+#X floatatom 998 744 5 0 1 0 - - - 0 0, f 5;
+#X text 1115 740 Feedback;
+#X obj 804 171 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #ff8000
+#000000 #000000 11430 1 0;
+#X floatatom 1205 255 5 0 0 0 - - - 0 0, f 5;
+#X text 1205 85 Damping;
+#X obj 1205 207 flatgui/knob 32 32 0 20000 0 0 empty empty empty -2
+-8 0 8 #ff8000 #000000 #000000 20000 1;
+#X text 134 285 POLYPHONIC RESONATOR;
+#X text 35 356 ADSR ENVELOPE: lets the user control the wet signal's
+gain envelope;
+#X text 867 671 Dry Gain;
+#X obj 1125 1205 *~;
+#X msg 6 6 read -resize AudioFiles/Waterstream.wav ch1 ch2;
+#X text 1305 85 Amount;
+#X text 805 85 Feedback;
+#X obj 1205 374 tgl 20 0 empty empty empty 17 7 0 10 #ff8000 #000000
+#000000 0 1;
+#X obj 803 985 spigot~;
+#X obj 1205 285 send damp;
+#X obj 1154 769 receive Fb;
+#X floatatom 804 376 5 0 0 0 - - - 0 0, f 5;
+#X obj 804 404 send Fb;
+#X obj 1176 822 receive Fb;
+#X obj 1197 877 receive Fb;
+#X obj 1218 931 receive Fb;
+#X obj 1261 1034 receive Fb;
+#X obj 1283 1086 receive Fb;
+#X obj 1304 1139 receive Fb;
+#X obj 1240 983 receive Fb;
+#X obj 851 173 tgl 15 0 empty empty empty 17 7 0 10 #ff8000 #000000
+#000000 0 1;
+#X floatatom 859 259 5 0 0 0 - - - 0 0, f 5;
+#X obj 851 291 t b f;
+#X obj 859 201 * -2;
+#X obj 859 230 + 1;
+#X text 850 143 Negative Fb;
+#X text 1206 326 Wet Only (MIDI Gate);
+#X text 133 322 Exposed Parameters;
+#X text 133 696 Internal Parameters;
+#X floatatom 1305 255 5 0 0 0 - - - 0 0, f 5;
+#X obj 1305 285 send amount;
+#X obj 1506 1095 receive amount;
+#X obj 849 957 receive wetOnly;
+#X obj 1205 404 send wetOnly;
+#X obj 804 344 * 1;
+#X obj 658 85 loadbang;
+#X msg 973 144 300;
+#X msg 1065 145 1;
+#X msg 1111 144 1000;
+#X msg 1205 144 20000;
+#X msg 1305 144 0.7;
+#X text 35 456 NEGATIVE FB: switches from positive to negative feedback
+and viceversa.Defaults to positive.;
+#X obj 952 775 *~ 0.25;
+#X msg 1019 144 500;
+#X text 35 406 FEEDBACK: lets the user choose the feedback value.Dafaults
+to 0.9.;
+#X msg 804 144 0.9;
+#X text 760 525 Play;
+#X obj 821 621 loadbang;
+#X msg 821 644 1;
+#X text 352 6 click to load audio file;
+#X text 34 516 DAMPING: a low pass filter for damping the high frequencies.
+Defaults to 20000 Hz(assuming that the sample rate = 44100 Hz);
+#X text 36 625 WET ONLY: lets the wet signal through only (actslike
+a MIDI Gate).Defaults to false.;
+#X text 953 717 Scale Factor;
+#X text 37 779 SCALE FACTOR: specifies a scale factor for each copy
+of the signal fed into eachresonator in order to lower the chances
+of reaching distortion level.It is set to 0.25.;
+#X text 35 579 AMOUNT: amount of wet signal that lets through.Defaults
+to 0.7.;
+#X text 35 948 Each voice (ResonatorUnit) has its own envelope. Each
+envelope receives the same set of ADSR parameters.;
+#X text 184 882 Notes;
+#X text 35 1090 Needs MIDI Input.;
+#X text 35 995 The Feedback parameter controls the feedback of all
+resonators at once.;
+#X text 35 1042 The effect's full potential is reached when feedback
+has a value bewteen |0.95| and |1|! (Sweet spot is |0.985| imo).;
+#X text 36 729 DRY GAIN: the dry gain is set to 1 in order not todrop
+the signal's volume on plugin load.;
+#X text 36 918 This prototype supports max 8 voices of polyphony.;
+#X text 36 1122 Pd version: Pd-L2Ork;
+#X obj 1125 795 ResonatorUnit;
+#X obj 1147 849 ResonatorUnit;
+#X obj 1168 904 ResonatorUnit;
+#X obj 1189 957 ResonatorUnit;
+#X obj 1211 1008 ResonatorUnit;
+#X obj 1232 1059 ResonatorUnit;
+#X obj 1254 1112 ResonatorUnit;
+#X obj 1275 1164 ResonatorUnit;
+#X text 1405 742 Envelope;
+#X text 1506 1066 Wet Amount;
+#X text 850 927 Wet Only;
+#X text 1267 526 Polyphony handling;
+#X text 1266 483 MIDI Note in;
+#X obj 804 114 r init;
+#X obj 658 115 s init;
+#X obj 973 114 r init;
+#X obj 1019 114 r init;
+#X obj 1065 114 r init;
+#X obj 1111 114 r init;
+#X obj 1205 115 r init;
+#X obj 1305 115 r init;
+#X text 1006 35 PARAMETERS;
+#X text 638 144 Initialises Parameterson project load;
+#X connect 4 0 48 0;
+#X connect 5 1 11 0;
+#X connect 6 0 4 0;
+#X connect 6 0 5 0;
+#X connect 8 0 48 1;
+#X connect 9 0 37 0;
+#X connect 10 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 1;
+#X connect 14 0 4 0;
+#X connect 14 0 5 0;
+#X connect 15 0 42 0;
+#X connect 15 1 42 1;
+#X connect 16 0 58 1;
+#X connect 17 0 36 0;
+#X connect 18 0 33 0;
+#X connect 19 0 34 0;
+#X connect 20 0 35 0;
+#X connect 21 0 39 0;
+#X connect 21 1 39 1;
+#X connect 22 0 39 0;
+#X connect 22 1 39 2;
+#X connect 23 0 39 0;
+#X connect 23 1 39 3;
+#X connect 28 0 118 3;
+#X connect 30 0 119 3;
+#X connect 31 0 120 3;
+#X connect 32 0 121 3;
+#X connect 33 0 21 0;
+#X connect 34 0 22 0;
+#X connect 35 0 23 0;
+#X connect 36 0 39 0;
+#X connect 37 0 8 0;
+#X connect 38 0 16 0;
+#X connect 39 0 29 0;
+#X connect 40 0 43 0;
+#X connect 41 0 84 0;
+#X connect 42 0 40 0;
+#X connect 42 1 40 1;
+#X connect 42 2 40 2;
+#X connect 43 0 118 2;
+#X connect 43 1 119 2;
+#X connect 43 2 120 2;
+#X connect 43 3 121 2;
+#X connect 43 4 122 2;
+#X connect 43 5 123 2;
+#X connect 43 6 124 2;
+#X connect 43 7 125 2;
+#X connect 44 0 122 3;
+#X connect 45 0 123 3;
+#X connect 46 0 124 3;
+#X connect 47 0 125 3;
+#X connect 48 0 63 0;
+#X connect 48 0 97 0;
+#X connect 49 0 97 1;
+#X connect 51 0 89 0;
+#X connect 52 0 64 0;
+#X connect 54 0 52 0;
+#X connect 58 0 3 0;
+#X connect 58 0 3 1;
+#X connect 59 0 2 0;
+#X connect 62 0 88 0;
+#X connect 63 0 3 0;
+#X connect 63 0 3 1;
+#X connect 65 0 118 1;
+#X connect 66 0 67 0;
+#X connect 68 0 119 1;
+#X connect 69 0 120 1;
+#X connect 70 0 121 1;
+#X connect 71 0 123 1;
+#X connect 72 0 124 1;
+#X connect 73 0 125 1;
+#X connect 74 0 122 1;
+#X connect 75 0 77 0;
+#X connect 75 0 78 0;
+#X connect 76 0 77 0;
+#X connect 77 0 89 0;
+#X connect 77 1 89 1;
+#X connect 78 0 79 0;
+#X connect 79 0 76 0;
+#X connect 84 0 85 0;
+#X connect 86 0 38 0;
+#X connect 87 0 63 1;
+#X connect 89 0 66 0;
+#X connect 90 0 132 0;
+#X connect 91 0 17 0;
+#X connect 92 0 19 0;
+#X connect 93 0 20 0;
+#X connect 94 0 54 0;
+#X connect 95 0 41 0;
+#X connect 97 0 118 0;
+#X connect 97 0 119 0;
+#X connect 97 0 120 0;
+#X connect 97 0 121 0;
+#X connect 97 0 122 0;
+#X connect 97 0 123 0;
+#X connect 97 0 124 0;
+#X connect 97 0 125 0;
+#X connect 98 0 18 0;
+#X connect 100 0 51 0;
+#X connect 102 0 103 0;
+#X connect 103 0 9 0;
+#X connect 118 0 58 0;
+#X connect 119 0 58 0;
+#X connect 120 0 58 0;
+#X connect 121 0 58 0;
+#X connect 122 0 58 0;
+#X connect 123 0 58 0;
+#X connect 124 0 58 0;
+#X connect 125 0 58 0;
+#X connect 131 0 100 0;
+#X connect 133 0 91 0;
+#X connect 134 0 98 0;
+#X connect 135 0 92 0;
+#X connect 136 0 93 0;
+#X connect 137 0 94 0;
+#X connect 138 0 95 0;

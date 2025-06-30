@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="VxZSOy" name="Colorizer" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginFormats="buildStandalone,buildVST3" pluginCharacteristicsValue="pluginWantsMidiIn"
+              pluginManufacturer="LIM" pluginManufacturerCode="LIM!" pluginChannelConfigs="{2,2},{1,1}"
+              pluginVST3Category="Delay,Filter,Fx" pluginDesc="MIDI controlled Polyphonic Resonator">
+  <MAINGROUP id="Q2vuy3" name="Colorizer">
+    <GROUP id="{C0242AAD-C044-B737-F896-78E9B79DB52D}" name="Source">
+      <GROUP id="{9EB2B622-49F1-4779-20C9-30825ED4C185}" name="GUI">
+        <FILE id="VKSmxf" name="PluginEditorGUI.cpp" compile="1" resource="0"
+              file="Source/PluginEditorGUI.cpp"/>
+        <FILE id="WMgGxP" name="PluginEditorGUI.h" compile="0" resource="0"
+              file="Source/PluginEditorGUI.h"/>
+        <FILE id="EskOlW" name="RotarySliderLNF.h" compile="0" resource="0"
+              file="Source/RotarySliderLNF.h"/>
+        <FILE id="So10MB" name="ToggleButtonLNF.h" compile="0" resource="0"
+              file="Source/ToggleButtonLNF.h"/>
+        <FILE id="QB7SyM" name="LinearSliderLNF.h" compile="0" resource="0"
+              file="Source/LinearSliderLNF.h"/>
+      </GROUP>
+      <GROUP id="{676016D6-9AB2-75F1-727E-4F99410C01C5}" name="DSP">
+        <FILE id="G8b0mm" name="ADSREnvelope.h" compile="0" resource="0" file="Source/ADSREnvelope.h"/>
+        <FILE id="o7qcNc" name="DampingFilter.h" compile="0" resource="0" file="Source/DampingFilter.h"/>
+        <FILE id="Dj8qCl" name="DryWetManager.h" compile="0" resource="0" file="Source/DryWetManager.h"/>
+        <FILE id="lcSnID" name="FractionalDelay.h" compile="0" resource="0"
+              file="Source/FractionalDelay.h"/>
+        <FILE id="yUP561" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+        <FILE id="HyvHqc" name="SynthVoice.cpp" compile="1" resource="0" file="Source/SynthVoice.cpp"/>
+        <FILE id="MNbrN5" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
+      </GROUP>
+      <FILE id="RW9P4U" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="VqAsBO" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="eEEyEi" name="PluginParameters.h" compile="0" resource="0"
+            file="Source/PluginParameters.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Colorizer"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Colorizer"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>

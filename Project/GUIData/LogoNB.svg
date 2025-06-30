@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Livello_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="5442.52px"
+	 height="3061.42px" viewBox="0 0 5442.52 3061.42" enable-background="new 0 0 5442.52 3061.42" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="820.747" height="283.468" x="2542.106" y="1445.279" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M2682.527,1446.059l28.347-28.346l56.693-0.001l28.347,28.347
+	v56.693l-28.347,28.348l-56.693-0.001l-28.347-28.347V1446.059L2682.527,1446.059z M2710.874,1446.058v56.694h56.693v-56.693
+	L2710.874,1446.058L2710.874,1446.058z"/>
+<path fill="#FFFFFF" d="M2824.234,1502.768l0.027,85.025l28.348,28.342v-85.037l56.689,0.001l28.35-28.348v-56.693l-28.35-28.347
+	l-56.689,0.001l-28.35,28.346v56.693l0,0L2824.234,1502.768L2824.234,1502.768z M2852.609,1446.058v56.694h56.689v-56.693
+	L2852.609,1446.058L2852.609,1446.058z"/>
+<polygon fill="#FFFFFF" points="3051.043,1502.751 3051.033,1446.055 2994.338,1446.055 2994.338,1502.748 2994.323,1531.09 
+	2965.994,1502.748 2965.979,1446.059 2965.994,1361.015 2994.338,1332.673 2994.338,1417.709 3051.033,1417.708 3079.379,1446.055 
+	3079.379,1502.748 3051.043,1531.094 3051.043,1502.751 "/>
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="3107.738,1446.058 3136.084,1417.716 3192.764,1417.708 
+	3221.109,1446.055 3221.109,1502.748 3192.778,1531.094 3192.778,1502.751 3192.764,1446.055 3136.068,1446.055 3136.068,1502.748 
+	3136.059,1531.09 3107.723,1502.748 3107.738,1446.058 "/>
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="3334.508,1446.059 3362.854,1446.058 3334.498,1417.708 
+	3277.818,1417.716 3249.469,1446.058 3249.459,1502.748 3277.789,1531.09 3277.804,1502.748 3277.804,1446.055 3334.508,1446.059 
+	"/>
+<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="2573.385,1506.585 2573.396,1456.045 2630.008,1512.675 
+	2629.967,1441.921 2654.183,1417.718 2654.185,1616.141 2573.385,1506.585 "/>
+<polygon fill="#FFFFFF" points="2622.825,1442.179 2622.895,1492.804 2566.283,1436.174 2566.325,1506.928 2542.108,1531.131 
+	2542.106,1332.708 2622.825,1442.179 "/>
+</svg>

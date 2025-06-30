@@ -1,0 +1,4 @@
+PLUGIN CHANGELOG
+
+Colorizer :: 1.0.0 :: 10/04/2022
+- Initial release
