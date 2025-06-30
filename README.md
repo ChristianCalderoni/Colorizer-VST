@@ -10,6 +10,10 @@ A MIDI-controlled polyphonic resonator VST plugin.
 
 Colorizer is a MIDI-controlled polyphonic resonator. The algorithm adjusts the delay time of up to eight independent fractional delay lines with feedback to generate pitch-specific resonances in the input signal, based on the MIDI notes played by the user.
 
+You can find the Windows compatible '.vst3' file here: [Colorizer Windows](Builds/Windows/x64).
+
+Alternatively, you can download the compiled VST3 and Audio Unit (AU) plugin versions from the following link: [Colorizer plugin](https://audioplugins.lim.di.unimi.it/index.php?p=2) (search for "Colorizer").
+
 ## Parameters
 
 - ADSR: controls the amplitude envelope applied to the wet signal.
