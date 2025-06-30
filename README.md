@@ -10,12 +10,6 @@ A MIDI-controlled polyphonic resonator VST plugin.
 
 Colorizer is a MIDI-controlled polyphonic resonator. The algorithm adjusts the delay time of up to eight independent fractional delay lines with feedback to generate pitch-specific resonances in the input signal, based on the MIDI notes played by the user.
 
-## Block Diagram
-
-<p align="center">
-  <img src="Images/SignalPath.png" alt="SignalPath">
-</p>
-
 ## Parameters
 
 - ADSR: controls the amplitude envelope applied to the wet signal.
@@ -24,6 +18,12 @@ Colorizer is a MIDI-controlled polyphonic resonator. The algorithm adjusts the d
 - Wet Amount: sets the level of the wet signal.
 - Damping: sets the cutoff frequency of the low-pass filter in the feedback path, affecting how quickly high frequencies decay.
 - Tune: allows fine-tuning of the overall pitch of the resonated signal.
+
+## Block Diagram
+
+<p align="center">
+  <img src="Images/SignalPath.png" alt="SignalPath">
+</p>
 
 ## Notes
 
